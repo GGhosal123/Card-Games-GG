@@ -18,6 +18,7 @@ def Card_Deck():
         Shuffled_deck.append(choice)  
         All_deck.remove(choice)  # Remove chosen element to prevent repetition  
 
+    print("Card Shuffle completed...")
     print(Shuffled_deck)
     
     return Shuffled_deck
@@ -30,19 +31,30 @@ def main():
     os.system('cls')
 
     my_Deck = Card_Deck()
-
+ 
    # print (my_Deck)
 
-    player1_Deck = my_Deck[:13]
-    player2_Deck = my_Deck[13:26]
-    player3_Deck = my_Deck[26:39]
-    player4_Deck = my_Deck[39:52]
+    playerA_deck=[]
+    playerB_deck=[]
+    playerC_deck=[]
+    playerD_deck=[]
+    
+    for i in range(1,14):
+        playerA_deck.append(my_Deck.pop())
+        playerB_deck.append(my_Deck.pop())
+        playerC_deck.append(my_Deck.pop())
+        playerD_deck.append(my_Deck.pop())
 
-    print ('Player 1 Deck : ',player1_Deck)
-    print ('Player 2 Deck : ',player2_Deck)
-    print ('Player 3 Deck : ',player3_Deck)
-    print ('Player 4 Deck : ',player4_Deck)
+    print("Distribution completed...",end=" ")
+    print(my_Deck)
+    
+    ##for i in range(1,14):
+    ## playerx_deck.append(my_Deck.pop())
 
+    print ('Player A Deck : ',playerA_deck)
+    print ('Player B Deck : ',playerB_deck)
+    print ('Player C Deck : ',playerC_deck)
+    print ('Player D Deck : ',playerD_deck)
 
 # Using the special variable 
 # __name__
